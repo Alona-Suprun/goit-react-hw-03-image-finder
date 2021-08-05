@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import ImageGallery from './components/ImageGallery/ImageGallery';
 
 import Searchbar from './components/Searchbar/Searchbar';
 
@@ -29,6 +30,7 @@ class App extends Component {
           draggable
           pauseOnHover
         />
+        <ImageGallery searchValue={this.state.searchValue} />
       </>
     );
   }

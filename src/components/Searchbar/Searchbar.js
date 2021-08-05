@@ -18,7 +18,7 @@ class Searchbar extends Component {
   onSubmit = e => {
     e.preventDefault();
     if (this.state.searchValue.trim() === '') {
-      toast('Please type something');
+      toast('Please type something to find image you want');
       return;
     }
     this.props.onSubmit(this.state.searchValue);
