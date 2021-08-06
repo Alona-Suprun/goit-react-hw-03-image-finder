@@ -7,6 +7,7 @@
   box-shadow: 0 0 10px 10px rgb(49, 138, 68) inset, 0 0 0 0 black;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
