@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
@@ -97,7 +97,11 @@ class ImageGallery extends Component {
       return (
         <>
           <ul className={s.imageGallery}>
-            <ImageGalleryItem image={image} />
+            <ImageGalleryItem
+              image={image}
+              openModal={this.props.openModal}
+              modalContent={this.props.modalContent}
+            />
           </ul>
           {loading ? (
             <div
@@ -129,6 +133,8 @@ class ImageGallery extends Component {
 ImageGallery.propTypes = {
   onClick: PropTypes.func,
   searchValue: PropTypes.string.isRequired,
+  openModal: PropTypes.func,
+  modalContent: PropTypes.func,
 };
 
 export default ImageGallery;
